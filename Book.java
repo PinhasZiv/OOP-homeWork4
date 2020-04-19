@@ -2,9 +2,9 @@ package libraryManagment;
 
 public class Book {
 	
-	protected String nameOfBook;
-	protected int numOfPages;
-	protected String nameOfAuthor;
+	private String nameOfBook;
+	private int numOfPages;
+	private String nameOfAuthor;
 	
 	public Book() {
 		
