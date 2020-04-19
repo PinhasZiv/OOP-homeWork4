@@ -1,39 +1,40 @@
 package homeWork4;
 
 public class Book {
-	
-	private String nameOfBook;
+
+	private String name;
 	private int numOfPages;
-	private String nameOfAuthor;
-	
+	private String authorName;
+
 	public Book() {
-		
-		this.nameOfBook = "lagaat be osher";
+
+		this.name = "lagaat ba'osher";
 		this.numOfPages = 101;
-		this.nameOfAuthor = "osher lagate";
+		this.authorName = "osher lagate";
 	}
-	
+
 	public Book(String nameOfBook, int numOfPages, String nameOfAuthr) {
-		
+
 		setNameOfBook(nameOfBook);
 		setNameOfAuthor(nameOfAuthr);
 		setNumOfPages(numOfPages);
-		
+
 	}
+
 	public String toString() {
-		return "The book: " + this.nameOfBook + " was written by " + this.nameOfAuthor + 
-				" and have " + numOfPages + " pages.";
+		return "Book: " + this.name + " Authr: " + this.authorName + " Pages:" + numOfPages;
 	}
-	
+
 	public String Summarize() {
-		return "touching Osher accross the world";
+		return "The book: " + this.name + " was written by " + this.authorName + " and have " + numOfPages + " pages.";
 	}
+
 	public String getNameOfBook() {
-		return nameOfBook;
+		return name;
 	}
 
 	public void setNameOfBook(String nameOfBook) {
-		this.nameOfBook = nameOfBook;
+		this.name = nameOfBook;
 	}
 
 	public int getNumOfPages() {
@@ -41,19 +42,30 @@ public class Book {
 	}
 
 	public void setNumOfPages(int numOfPages) {
-		
-		if(numOfPages < 0) {
+		if (numOfPages < 0) {
 			this.numOfPages = 100;
+		} else {
+			this.numOfPages = numOfPages;
 		}
-		this.numOfPages = numOfPages;
 	}
 
 	public String getNameOfAuthor() {
-		return nameOfAuthor;
+		return authorName;
 	}
 
 	public void setNameOfAuthor(String nameOfAuthor) {
-		this.nameOfAuthor = nameOfAuthor;
+		this.authorName = nameOfAuthor;
 	}
-	// add equals function
+	// TODO add equals function
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Book))
+			return false;
+		Book other = (Book) obj;
+		return this.getNameOfBook().equals(other.getNameOfBook())
+				&& this.getNameOfAuthor().equals(other.getNameOfAuthor())
+				&& this.getNumOfPages() == other.getNumOfPages();
+
+	}
 }
