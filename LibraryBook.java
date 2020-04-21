@@ -1,11 +1,15 @@
 package homeWork4;
 
 public class LibraryBook extends Book {
-
+	
 	// TODO 
-	// ask at forum about writing the constractors
+	// ask at forum about writing the contractors
 	// and toString function even if it extends 
 	// automaticly from super class?
+	public LibraryBook() {
+	
+		
+	}
 
 	@Override
 	public String Summarize() {

@@ -4,7 +4,7 @@ public class Book {
 
 	private String name;
 	private int numOfPages;
-	private String authorName;
+	protected String authorName;
 
 	public Book() {
 
@@ -22,7 +22,7 @@ public class Book {
 	}
 
 	public String toString() {
-		return "Book: " + this.name + " Authr: " + this.authorName + " Pages:" + numOfPages;
+		return "Book: " + this.name + " Author: " + this.authorName + " Pages:" + numOfPages;
 	}
 
 	public String Summarize() {
