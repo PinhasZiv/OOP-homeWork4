@@ -57,10 +57,13 @@ public class CookBook extends LibraryBook {
 	}
 
 	public boolean returnBook(int numOfCopies) {
+		if(numOfCopies >= 0 ) {
 		this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);
 		if(this.isDamaged)
 			fine();
 		return true;
+		}
+		return false;
 	}
 
 	public void fine() {

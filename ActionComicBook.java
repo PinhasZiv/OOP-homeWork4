@@ -9,8 +9,8 @@ public class ActionComicBook extends ComicBook {
 		this.ageLimit = 10;
 	}
 
-	public ActionComicBook(int ageLimit, int numOfCopies, String nameOfBook, int numOfPages, String nameOfAuthr) {
-		super(numOfCopies, nameOfBook, numOfPages, nameOfAuthr);
+	public ActionComicBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies, int ageLimit) {
+		super(nameOfBook, numOfPages, nameOfAuthr, numOfCopies);
 		this.ageLimit = ageLimit;
 	}
 
@@ -31,7 +31,7 @@ public class ActionComicBook extends ComicBook {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Age limit: " + this.getAgeLimit();
+		return super.toString() + " Age limit: " + this.getAgeLimit();
 	}
 
 	@Override

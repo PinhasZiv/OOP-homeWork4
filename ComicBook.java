@@ -9,7 +9,7 @@ public class ComicBook extends LibraryBook {
 		this.numOfCopies = 10;
 	}
 
-	public ComicBook(int numOfCopies, String nameOfBook, int numOfPages, String nameOfAuthr) {
+	public ComicBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies) {
 		super(nameOfBook, numOfPages, nameOfAuthr);
 		this.numOfCopies = numOfCopies;
 	}
@@ -46,8 +46,11 @@ public class ComicBook extends LibraryBook {
 	}
 
 	public boolean returnBook(int numOfCopies) {
-		this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);
-		return true;
+		if (numOfCopies > 0) {
+			this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);
+			return true;
+		}
+		return false;
 	}
 
 	@Override
