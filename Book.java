@@ -22,11 +22,11 @@ public class Book {
 	}
 
 	public String toString() {
-		return "Book: " + this.name + " Authr: " + this.authorName + " Pages:" + numOfPages;
+		return "Book: " + this.getNameOfBook() + " Authr: " + this.getNameOfAuthor() + " Pages:" + this.getNumOfPages();
 	}
 
 	public String Summarize() {
-		return "The book: " + this.name + " was written by " + this.authorName + " and have " + numOfPages + " pages.";
+		return "The book: " + this.getNameOfBook() + " was written by " + this.getNameOfAuthor() + " and have " + this.getNumOfPages() + " pages.";
 	}
 
 	public String getNameOfBook() {
@@ -60,12 +60,13 @@ public class Book {
 
 	@Override
 	public boolean equals(Object obj) {
+		if(this == obj) return true;
 		if (!(obj instanceof Book))
 			return false;
 		Book other = (Book) obj;
-		return this.getNameOfBook().equals(other.getNameOfBook())
-				&& this.getNameOfAuthor().equals(other.getNameOfAuthor())
-				&& this.getNumOfPages() == other.getNumOfPages();
+		return (this.getNameOfBook() == other.getNameOfBook()
+				&& this.getNameOfAuthor() == other.getNameOfAuthor()
+				&& this.getNumOfPages() == other.getNumOfPages());
 
 	}
 }
