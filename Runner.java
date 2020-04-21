@@ -7,6 +7,7 @@ public class Runner {
 		// 1)//TODO
 
 		// 2)
+		System.out.println("2)*****************************");
 		ComicBook comi = new ComicBook("scubidu",120,"aron black",4);
 		System.out.println("is borrow: " + comi.borrow(3));
 		System.out.println("is return book: " + comi.returnBook(1));
@@ -24,10 +25,19 @@ public class Runner {
 		System.out.println("is return cook book " + cosher1.returnBook(9));
 
 		// 3)
+		System.out.println("3)*****************************");
+
 		System.out.println(comi);
 		System.out.println(actionCom1);
 		System.out.println(cB1);
 		System.out.println(cosher1);
+		//4)
+		System.out.println("4)*****************************");
+		
+		System.out.println(comi.Summarize());
+		System.out.println(actionCom1.Summarize());
+		System.out.println(cB1.Summarize());
+		System.out.println(cosher1.Summarize());
 	}
 
 }

@@ -57,14 +57,19 @@ public class CookBook extends LibraryBook {
 	}
 
 	public boolean returnBook(int numOfCopies) {
-		if(numOfCopies >= 0 ) {
+	
+		if(numOfCopies < 0) {
+			System.out.println("INVALID VALUE");
+			
+		}
 		this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);
 		if(this.isDamaged)
 			fine();
 		return true;
+		
 		}
-		return false;
-	}
+
+	
 
 	public void fine() {
 		System.out.println("Damaged book return! Fine is 200NIS");
