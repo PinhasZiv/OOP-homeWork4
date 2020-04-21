@@ -28,7 +28,7 @@ public class ComicBook extends LibraryBook {
 
 	public String Summarize() {
 		// TODO to Check if we need to write it again
-		// (gay asked at the furum about it).
+		// (gay asked at the forum about it).
 		return super.Summarize();
 	}
 
