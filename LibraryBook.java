@@ -13,10 +13,7 @@ public class LibraryBook extends Book {
 	// and toString function even if it extends
 
 	// automaticly from super class?
-	public LibraryBook() {
-	
-		
-	}
+	public LibraryBook() {}
 	
 	public LibraryBook(String nameOfBook, int numOfPages, String nameOfAuthr) {
 		super(nameOfBook, numOfPages, nameOfAuthr);
@@ -24,16 +21,13 @@ public class LibraryBook extends Book {
 
 	@Override
 	public String Summarize() {
-
-		return super.Summarize() + "\nThis book is" + " for reading inside the library only";
+		return "This is a library book." + "\nThis book is for reading inside the library only.";
 	}
+	
 	public boolean equals(Object obj) {
-		
-		return super.equals(obj);
+		if(!(obj instanceof LibraryBook))
+			return false;
+		return (super.equals(obj));
 	}
-
-	// TODO
-	// ask at forum if we need to override the
-	// equals function even if it's almost the same object?
 
 }

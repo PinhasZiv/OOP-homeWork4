@@ -1,6 +1,6 @@
 package homeWork4;
 
-public class ComicBook extends LibraryBook {
+public class ComicBook extends Book {
 
 	private int numOfCopies;
 
@@ -11,7 +11,7 @@ public class ComicBook extends LibraryBook {
 
 	public ComicBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies) {
 		super(nameOfBook, numOfPages, nameOfAuthr);
-		this.numOfCopies = numOfCopies;
+		setNumOfCopies(numOfCopies);
 	}
 
 	public int getNumOfCopies() {
@@ -27,20 +27,26 @@ public class ComicBook extends LibraryBook {
 	}
 
 	public String Summarize() {
-		// TODO to Check if we need to write it again
-		// (gay asked at the forum about it).
-		return super.Summarize();
+		// TODO
+		// check if we need to print the message
+		// "this book is for reading inside the library only".
+		return "This is a comic book. \n" + super.Summarize();
 	}
 
 	public boolean borrow(int numOfCopies) {
-		if (this.numOfCopies - numOfCopies > 0) {
+		if(numOfCopies <= 0) {
+			System.out.println("INVALID VALUE");
+			return false;
+		}
+		if (this.numOfCopies - numOfCopies >= 0) {
 			this.numOfCopies = (this.numOfCopies - numOfCopies);
+			System.out.println(numOfCopies + " copies were borrowed");
 			return true;
 		} else {
 			// TODO
 			// check if we need to print this message.
-			System.out.println("You can't borrow that number of copies." + "There are only " + this.numOfCopies
-					+ "Copies available at the library");
+			System.out.println("You can't borrow that number of copies. " + "There are only " + this.getNumOfCopies()
+					+ " Copies available in the library");
 			return false;
 		}
 	}
@@ -48,15 +54,16 @@ public class ComicBook extends LibraryBook {
 	public boolean returnBook(int numOfCopies) {
 		if (numOfCopies > 0) {
 			this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);
+			System.out.println(numOfCopies + " copies were returned");
 			return true;
+		} else {
+			System.out.println("INVALID VALUE");
+			return false;
 		}
-		return false;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
 		if (!(obj instanceof ComicBook))
 			return false;
 		if (!(super.equals(obj)))

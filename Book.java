@@ -26,7 +26,7 @@ public class Book {
 	}
 
 	public String Summarize() {
-		return "The book: " + this.name + " was written by " + this.authorName + " and have " + numOfPages + " pages.";
+		return "The is a regular book. ";
 	}
 
 	public String getNameOfBook() {
@@ -60,6 +60,8 @@ public class Book {
 
 	@Override
 	public boolean equals(Object obj) {
+		if(this == obj)
+			return true;
 		if (!(obj instanceof Book))
 			return false;
 		Book other = (Book) obj;
@@ -68,4 +70,6 @@ public class Book {
 				&& this.getNumOfPages() == other.getNumOfPages();
 
 	}
+	
+	
 }

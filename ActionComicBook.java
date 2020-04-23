@@ -11,7 +11,7 @@ public class ActionComicBook extends ComicBook {
 
 	public ActionComicBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies, int ageLimit) {
 		super(nameOfBook, numOfPages, nameOfAuthr, numOfCopies);
-		this.ageLimit = ageLimit;
+		setAgeLimit(ageLimit);
 	}
 
 	public int getAgeLimit() {
@@ -19,14 +19,17 @@ public class ActionComicBook extends ComicBook {
 	}
 
 	public void setAgeLimit(int ageLimit) {
-		this.ageLimit = ageLimit;
+		if(ageLimit < 0) {
+			this.ageLimit = 16;
+		} else{
+			this.ageLimit = ageLimit;
+		}
 	}
 
 	@Override
 	public String Summarize() {
-		// TODO Auto-generated method stub
 		return super.Summarize() + "This action comic book is for ages greater than " + this.getAgeLimit()
-				+ "years old.";
+				+ " years old.";
 	}
 
 	@Override
@@ -36,8 +39,6 @@ public class ActionComicBook extends ComicBook {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
 		if (!(obj instanceof ActionComicBook))
 			return false;
 		if (!super.equals(obj))
