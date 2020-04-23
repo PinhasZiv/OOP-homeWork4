@@ -5,7 +5,10 @@ public class ActionComicBook extends ComicBook {
 	private int ageLimit;
 
 	public ActionComicBook() {
-		super();
+		setNameOfBook("Spiderman");
+		setNumOfPages(124);
+		setNameOfAuthor("MARVEL");
+		setNumOfCopies(13);
 		this.ageLimit = 10;
 	}
 
@@ -28,13 +31,13 @@ public class ActionComicBook extends ComicBook {
 
 	@Override
 	public String Summarize() {
-		return super.Summarize() + "This action comic book is for ages greater than " + this.getAgeLimit()
+		return super.Summarize() + " This action comic book is for ages greater than " + this.getAgeLimit()
 				+ " years old.";
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + " Age limit: " + this.getAgeLimit();
+		return super.toString() + ". Age limit: " + this.getAgeLimit();
 	}
 
 	@Override

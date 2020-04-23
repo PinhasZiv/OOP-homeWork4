@@ -21,7 +21,8 @@ public class LibraryBook extends Book {
 
 	@Override
 	public String Summarize() {
-		return "This is a library book." + "\nThis book is for reading inside the library only.";
+		return "This is a library book." + " This book is for reading inside the library only.";
+		
 	}
 	
 	public boolean equals(Object obj) {

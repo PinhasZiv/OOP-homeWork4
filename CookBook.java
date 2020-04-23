@@ -1,33 +1,20 @@
 package homeWork4;
 
-public class CookBook extends Book {
+public class CookBook extends BookForBorrow {
 
-	private int numOfCopies;
 	private boolean isDamaged;
 
 	public CookBook() {
-		super();
-		this.numOfCopies = 10;
+		setNameOfBook("Cakes And Cookies");
+		setNumOfPages(76);
+		setNameOfAuthor("CARMELA MENASHE");
+		setNumOfCopies(6);
 		this.isDamaged = false;
 	}
 
 	public CookBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies, boolean isDamaged) {
-		super(nameOfBook, numOfPages, nameOfAuthr);
-		setNumOfCopies(numOfCopies);
-		;
+		super(nameOfBook, numOfPages, nameOfAuthr, numOfCopies);
 		setDamaged(isDamaged);
-	}
-
-	public int getNumOfCopies() {
-		return numOfCopies;
-	}
-
-	public void setNumOfCopies(int numOfCopies) {
-		if (numOfCopies < 0) {
-			this.numOfCopies = 0;
-		} else {
-			this.numOfCopies = numOfCopies;
-		}
 	}
 
 	public boolean isDamaged() {
@@ -41,25 +28,7 @@ public class CookBook extends Book {
 	public String Summarize() {
 		// TODO to Check if we need to write it again
 		// (gay asked at the forum about it).
-		return super.Summarize() + "This cooking book might contain non cosher intgredients";
-	}
-
-	public boolean borrow(int numOfCopies) {
-		if(numOfCopies <= 0) {
-			System.out.println("INVALID VALUE");
-			return false;
-		}
-		if (this.numOfCopies - numOfCopies > 0) {
-			this.numOfCopies = (this.numOfCopies - numOfCopies);
-			System.out.println(numOfCopies + " copies were borrowed");
-			return true;
-		} else {
-			// TODO
-			// check if we need to print this message.
-			System.out.println("You can't borrow that number of copies. " + "There are only " + this.getNumOfCopies()
-					+ " Copies available in the library");
-			return false;
-		}
+		return super.Summarize() + " This cooking book might contain non cosher intgredients";
 	}
 
 	public boolean returnBook(int numOfCopies) {
@@ -70,7 +39,7 @@ public class CookBook extends Book {
 			if (this.isDamaged)
 				fine();
 			this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);
-			System.out.println(numOfCopies + " copies were returned");
+			System.out.println(numOfCopies + ": copies were returned");
 			return true;
 		}
 	}
@@ -91,7 +60,7 @@ public class CookBook extends Book {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Damage: " + this.isDamaged();
+		return super.toString() + ". Damage: " + this.isDamaged();
 	}
 
 }

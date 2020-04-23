@@ -5,9 +5,11 @@ public class CosherCookBook extends CookBook {
 	private String supervision;
 
 	public CosherCookBook() {
-
-		super();
-		this.supervision = "smart hanuka";
+		setNameOfBook("Glat Cooking");
+		setNumOfPages(84);
+		setNameOfAuthor("RABI JACOB");
+		setNumOfCopies(4);
+		this.supervision = "Smart Hanuka";
 	}
 
 	public CosherCookBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies, boolean isDamaged,
@@ -19,12 +21,12 @@ public class CosherCookBook extends CookBook {
 
 	public String toString() {
 
-		return super.toString() + "Supervisor" + this.getSuperVision();
+		return super.toString() + ". Supervisor: " + this.getSuperVision();
 	}
 
 	public String Summarize() {
 
-		return super.Summarize() + "this cosher cooking book is superbised by" + this.getSuperVision();
+		return "This is a cosher cooking book. " + "This cosher cooking book is superbised by: " + this.getSuperVision();
 	}
 	
 	@Override

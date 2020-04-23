@@ -8,14 +8,14 @@ public class Runner {
 
 		Book book = new Book();
 		LibraryBook lBook = new LibraryBook("Harry Poter", 842, "J.K ROWLING");
-		ComicBook comBook = new ComicBook("scubidu", 120, "aron black", 4);
-		ActionComicBook actComBook = new ActionComicBook("X-MAN", 205, "MARVEL", 8, 17);
-		CookBook cookingBook = new CookBook("COOKING WITH THE KING", 13, "Aron aaroni", 4, true);
+		ComicBook comBook = new ComicBook("Scubidu", 120, "DAN HARMON", 4);
+		ActionComicBook actComBook = new ActionComicBook("X-Man", 205, "MARVEL", 8, 17);
+		CookBook cookingBook = new CookBook("Cooking With The King", 13, "AHARON AHARONI", 4, true);
 		CosherCookBook coshCookingBook = new CosherCookBook();
 
 		
 		// 2)
-		System.out.println("2)*****************************");
+		System.out.println("**************** 2 *************");
 		
 		comBook.borrow(5);
 		comBook.returnBook(-3);
@@ -25,8 +25,9 @@ public class Runner {
 		cookingBook.returnBook(14);
 		coshCookingBook.borrow(7);
 		coshCookingBook.returnBook(7);
+		System.out.println();
 		// 3)
-		System.out.println("3)*****************************");
+		System.out.println("*************** 3 **************");
 		
 		System.out.println(book);
 		System.out.println(lBook);
@@ -34,8 +35,9 @@ public class Runner {
 		System.out.println(actComBook);
 		System.out.println(cookingBook);
 		System.out.println(coshCookingBook);
+		System.out.println();
 		// 4)
-		System.out.println("4)*****************************");
+		System.out.println("*************** 4 ************");
 		// TODO
 		// check some problems here. in the console.
 		System.out.println(book.Summarize());

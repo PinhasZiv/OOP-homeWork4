@@ -4,13 +4,13 @@ public class Book {
 
 	private String name;
 	private int numOfPages;
-	protected String authorName;
+	private String authorName;
 
 	public Book() {
 
-		this.name = "lagaat ba'osher";
+		this.name = "Laga'at Ba'osher";
 		this.numOfPages = 101;
-		this.authorName = "osher lagate";
+		this.authorName = "OSHER LAGA'AT";
 	}
 
 	public Book(String nameOfBook, int numOfPages, String nameOfAuthr) {
@@ -22,11 +22,11 @@ public class Book {
 	}
 
 	public String toString() {
-		return "Book: " + this.name + " Author: " + this.authorName + " Pages:" + numOfPages;
+		return "Book: " + this.name + ". Author: " + this.authorName + ". Pages:" + numOfPages;
 	}
 
 	public String Summarize() {
-		return "The is a regular book. ";
+		return "This is a regular book.";
 	}
 
 	public String getNameOfBook() {
