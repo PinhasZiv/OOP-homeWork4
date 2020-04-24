@@ -19,10 +19,12 @@ public class CookBook extends BookForBorrow {
 		setDamaged(isDamaged);
 	}
 
+	// Function that returns the damage field (boolean).
 	public boolean isDamaged() {
 		return isDamaged;
 	}
 
+	// Function that defines the damage field.
 	public void setDamaged(boolean isDamaged) {
 		this.isDamaged = isDamaged;
 	}
@@ -34,6 +36,9 @@ public class CookBook extends BookForBorrow {
 		return super.Summarize() + " This cooking book might contain non cosher intgredients";
 	}
 
+	// Library return function.
+	// (Receives number of copies to return (numOfCopies > 0),
+	// updates numOfCopies field and fines if ifDamage field = true.
 	public boolean returnBook(int numOfCopies) {
 		if (numOfCopies <= 0) {
 			System.out.println("INVALID VALUE");
@@ -47,6 +52,7 @@ public class CookBook extends BookForBorrow {
 		}
 	}
 
+	// Function that prints a fine message.
 	public void fine() {
 		System.out.println("Damaged book return! Fine is 200NIS");
 	}

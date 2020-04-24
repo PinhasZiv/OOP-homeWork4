@@ -4,7 +4,7 @@ public abstract class BookForBorrow extends LibraryBook {
 
 	private int numOfCopies;
 
-	// Default constructor 
+	// Default constructor
 	public BookForBorrow() {
 		super();
 		this.numOfCopies = 10;
@@ -16,6 +16,8 @@ public abstract class BookForBorrow extends LibraryBook {
 		setNumOfCopies(numOfCopies);
 	}
 
+	// Library borrowing function. Receives number of copies to borrow (numOfCopies > 0).
+	// Checks whether such number of copies can be borrowed and updates the numOfCopies field.
 	public boolean borrow(int numOfCopies) {
 		if (numOfCopies <= 0) {
 			System.out.println("INVALID VALUE");
@@ -28,12 +30,15 @@ public abstract class BookForBorrow extends LibraryBook {
 		} else {
 			// TODO
 			// check if we need to print this message.
-			System.out.println("You can't borrow " + numOfCopies + " copies. " + "There are only " + this.getNumOfCopies()
-					+ " Copies available in the library");
+			System.out.println("You can't borrow " + numOfCopies + " copies. " + "There are only "
+					+ this.getNumOfCopies() + " Copies available in the library");
 			return false;
 		}
 	}
 
+	// Library return function.
+	// (Receives number of copies to return (numOfCopies > 0),
+	// updates numOfCopies field.
 	public boolean returnBook(int numOfCopies) {
 		if (numOfCopies > 0) {
 			this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);

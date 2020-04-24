@@ -23,6 +23,7 @@ public class ActionComicBook extends ComicBook {
 		return ageLimit;
 	}
 
+	// Function that sets the age limit (ageLimit >= 0. default = 16).
 	public void setAgeLimit(int ageLimit) {
 		if(ageLimit < 0) {
 			this.ageLimit = 16;
