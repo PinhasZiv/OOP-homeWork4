@@ -4,6 +4,7 @@ public class CookBook extends BookForBorrow {
 
 	private boolean isDamaged;
 
+	// Default constructor
 	public CookBook() {
 		setNameOfBook("Cakes And Cookies");
 		setNumOfPages(76);
@@ -12,6 +13,7 @@ public class CookBook extends BookForBorrow {
 		this.isDamaged = false;
 	}
 
+	// Fields constructor
 	public CookBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies, boolean isDamaged) {
 		super(nameOfBook, numOfPages, nameOfAuthr, numOfCopies);
 		setDamaged(isDamaged);
@@ -25,6 +27,7 @@ public class CookBook extends BookForBorrow {
 		this.isDamaged = isDamaged;
 	}
 
+	// Function that prints the book summary.
 	public String Summarize() {
 		// TODO to Check if we need to write it again
 		// (gay asked at the forum about it).

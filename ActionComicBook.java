@@ -4,6 +4,7 @@ public class ActionComicBook extends ComicBook {
 
 	private int ageLimit;
 
+	// Default constructor
 	public ActionComicBook() {
 		setNameOfBook("Spiderman");
 		setNumOfPages(124);
@@ -12,6 +13,7 @@ public class ActionComicBook extends ComicBook {
 		this.ageLimit = 10;
 	}
 
+	// Fields constructor
 	public ActionComicBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies, int ageLimit) {
 		super(nameOfBook, numOfPages, nameOfAuthr, numOfCopies);
 		setAgeLimit(ageLimit);
@@ -29,6 +31,7 @@ public class ActionComicBook extends ComicBook {
 		}
 	}
 
+	// Function that prints the book summary.
 	@Override
 	public String Summarize() {
 		return super.Summarize() + " This action comic book is for ages greater than " + this.getAgeLimit()

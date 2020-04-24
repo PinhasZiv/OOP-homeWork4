@@ -12,13 +12,15 @@ public class LibraryBook extends Book {
 	// ask at forum about writing the constractors
 	// and toString function even if it extends
 
-	// automaticly from super class?
+	// Default constructor
 	public LibraryBook() {}
 	
+	// Fields constructor
 	public LibraryBook(String nameOfBook, int numOfPages, String nameOfAuthr) {
 		super(nameOfBook, numOfPages, nameOfAuthr);
 	}
 
+	// Function that prints the book summary.
 	@Override
 	public String Summarize() {
 		return "This is a library book." + " This book is for reading inside the library only.";

@@ -4,6 +4,7 @@ public class CosherCookBook extends CookBook {
 
 	private String supervision;
 
+	// Default constructor
 	public CosherCookBook() {
 		setNameOfBook("Glat Cooking");
 		setNumOfPages(84);
@@ -12,6 +13,7 @@ public class CosherCookBook extends CookBook {
 		this.supervision = "Smart Hanuka";
 	}
 
+	// Fields constructor
 	public CosherCookBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies, boolean isDamaged,
 			String supervision) {
 
@@ -24,6 +26,7 @@ public class CosherCookBook extends CookBook {
 		return super.toString() + ". Supervisor: " + this.getSuperVision();
 	}
 
+	// Function that prints the book summary.
 	public String Summarize() {
 
 		return "This is a cosher cooking book. " + "This cosher cooking book is superbised by: " + this.getSuperVision();

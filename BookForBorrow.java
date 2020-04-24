@@ -4,11 +4,13 @@ public abstract class BookForBorrow extends LibraryBook {
 
 	private int numOfCopies;
 
+	// Default constructor 
 	public BookForBorrow() {
 		super();
 		this.numOfCopies = 10;
 	}
 
+	// Fields constructor
 	public BookForBorrow(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies) {
 		super(nameOfBook, numOfPages, nameOfAuthr);
 		setNumOfCopies(numOfCopies);
@@ -47,6 +49,7 @@ public abstract class BookForBorrow extends LibraryBook {
 		return numOfCopies;
 	}
 
+	// set number of pages (numOfPages > 0. default = 100).
 	public void setNumOfCopies(int numOfCopies) {
 		if (numOfCopies < 0) {
 			this.numOfCopies = 0;

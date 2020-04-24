@@ -2,6 +2,7 @@ package homeWork4;
 
 public class ComicBook extends BookForBorrow {
 
+	// Default constructor
 	public ComicBook() {
 		setNameOfBook("Tintin");
 		setNumOfPages(97);
@@ -9,11 +10,13 @@ public class ComicBook extends BookForBorrow {
 		setNumOfCopies(14);
 	}
 
+	// Fields constructor
 	public ComicBook(String nameOfBook, int numOfPages, String nameOfAuthr, int numOfCopies) {
 		super(nameOfBook, numOfPages, nameOfAuthr, numOfCopies);
 		setNumOfCopies(numOfCopies);
 	}
 
+	// Function that prints the book summary.
 	public String Summarize() {
 		// TODO
 		// check if we need to print the message

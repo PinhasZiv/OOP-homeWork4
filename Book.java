@@ -6,6 +6,7 @@ public class Book {
 	private int numOfPages;
 	private String authorName;
 
+	// Default constructor 
 	public Book() {
 
 		this.name = "Laga'at Ba'osher";
@@ -13,6 +14,7 @@ public class Book {
 		this.authorName = "OSHER LAGA'AT";
 	}
 
+	// Fields constructor
 	public Book(String nameOfBook, int numOfPages, String nameOfAuthr) {
 
 		setNameOfBook(nameOfBook);
@@ -25,6 +27,7 @@ public class Book {
 		return "Book: " + this.name + ". Author: " + this.authorName + ". Pages:" + numOfPages;
 	}
 
+	// Function that prints the book summary.
 	public String Summarize() {
 		return "This is a regular book.";
 	}
@@ -41,6 +44,7 @@ public class Book {
 		return numOfPages;
 	}
 
+	// set number of pages (numOfPages > 0. default = 100).
 	public void setNumOfPages(int numOfPages) {
 		if (numOfPages < 0) {
 			this.numOfPages = 100;
@@ -56,7 +60,6 @@ public class Book {
 	public void setNameOfAuthor(String nameOfAuthor) {
 		this.authorName = nameOfAuthor;
 	}
-	// TODO add equals function
 
 	@Override
 	public boolean equals(Object obj) {
@@ -70,6 +73,5 @@ public class Book {
 				&& this.getNumOfPages() == other.getNumOfPages();
 
 	}
-	
-	
+
 }
