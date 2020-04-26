@@ -6,9 +6,8 @@ public class Book {
 	private int numOfPages;
 	private String authorName;
 
-	// Default constructor 
+	// Default constructor
 	public Book() {
-
 		this.name = "Laga'at Ba'osher";
 		this.numOfPages = 101;
 		this.authorName = "OSHER LAGA'AT";
@@ -24,12 +23,12 @@ public class Book {
 	}
 
 	public String toString() {
-		return "Book: " + this.name + ". Author: " + this.authorName + ". Pages:" + numOfPages;
+		return "Book: " + this.name + ". Author: " + this.authorName + ". Pages: " + numOfPages;
 	}
 
 	// Function that prints the book summary.
 	public String Summarize() {
-		return "This is a regular book.";
+		return "This is a book.";
 	}
 
 	public String getNameOfBook() {
@@ -45,7 +44,7 @@ public class Book {
 	}
 
 	// set number of pages (numOfPages > 0. default = 100).
-	public void setNumOfPages(int numOfPages) {
+	private void setNumOfPages(int numOfPages) {
 		if (numOfPages < 0) {
 			this.numOfPages = 100;
 		} else {
@@ -63,13 +62,12 @@ public class Book {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(this == obj)
+		if (this == obj)
 			return true;
 		if (!(obj instanceof Book))
 			return false;
 		Book other = (Book) obj;
-		return this.getNameOfBook().equals(other.getNameOfBook())
-				&& this.getNameOfAuthor().equals(other.getNameOfAuthor())
+		return this.getNameOfBook() == other.getNameOfBook() && this.getNameOfAuthor() == other.getNameOfAuthor()
 				&& this.getNumOfPages() == other.getNumOfPages();
 
 	}

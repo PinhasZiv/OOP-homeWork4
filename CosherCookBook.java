@@ -6,8 +6,8 @@ public class CosherCookBook extends CookBook {
 
 	// Default constructor
 	public CosherCookBook() {
+		super();
 		setNameOfBook("Glat Cooking");
-		setNumOfPages(84);
 		setNameOfAuthor("RABI JACOB");
 		setNumOfCopies(4);
 		this.supervision = "Smart Hanuka";

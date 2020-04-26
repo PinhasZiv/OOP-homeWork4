@@ -6,10 +6,10 @@ public class CookBook extends BookForBorrow {
 
 	// Default constructor
 	public CookBook() {
+		super();
 		setNameOfBook("Cakes And Cookies");
-		setNumOfPages(76);
 		setNameOfAuthor("CARMELA MENASHE");
-		setNumOfCopies(6);
+		setNumOfCopies(10);
 		this.isDamaged = false;
 	}
 
@@ -33,7 +33,7 @@ public class CookBook extends BookForBorrow {
 	public String Summarize() {
 		// TODO to Check if we need to write it again
 		// (gay asked at the forum about it).
-		return super.Summarize() + " This cooking book might contain non cosher intgredients";
+		return "This is a cook book." + " This cooking book might contain non cosher intgredients";
 	}
 
 	// Library return function.
@@ -47,7 +47,7 @@ public class CookBook extends BookForBorrow {
 			if (this.isDamaged)
 				fine();
 			this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);
-			System.out.println(numOfCopies + ": copies were returned");
+			System.out.println(numOfCopies + " copies were returned");
 			return true;
 		}
 	}
@@ -64,7 +64,7 @@ public class CookBook extends BookForBorrow {
 		if (!(super.equals(obj)))
 			return false;
 		CookBook other = (CookBook) obj;
-		return (this.getNumOfCopies() == other.getNumOfCopies() && this.isDamaged() == other.isDamaged());
+		return (this.isDamaged() == other.isDamaged());
 	}
 
 	@Override

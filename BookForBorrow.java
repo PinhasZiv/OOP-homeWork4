@@ -1,6 +1,6 @@
 package homeWork4;
 
-public abstract class BookForBorrow extends LibraryBook {
+public class BookForBorrow extends LibraryBook {
 
 	private int numOfCopies;
 
@@ -16,8 +16,10 @@ public abstract class BookForBorrow extends LibraryBook {
 		setNumOfCopies(numOfCopies);
 	}
 
-	// Library borrowing function. Receives number of copies to borrow (numOfCopies > 0).
-	// Checks whether such number of copies can be borrowed and updates the numOfCopies field.
+	// Library borrowing function. Receives number of copies to borrow (numOfCopies
+	// > 0).
+	// Checks whether such number of copies can be borrowed and updates the
+	// numOfCopies field.
 	public boolean borrow(int numOfCopies) {
 		if (numOfCopies <= 0) {
 			System.out.println("INVALID VALUE");
@@ -50,6 +52,12 @@ public abstract class BookForBorrow extends LibraryBook {
 		}
 	}
 
+	// Function that prints the book summary.
+	@Override
+	public String Summarize() {
+		return "This is a book for borrow.";
+	}
+
 	public int getNumOfCopies() {
 		return numOfCopies;
 	}
@@ -61,6 +69,21 @@ public abstract class BookForBorrow extends LibraryBook {
 		} else {
 			this.numOfCopies = numOfCopies;
 		}
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof BookForBorrow))
+			return false;
+		if (!(super.equals(obj)))
+			return false;
+		BookForBorrow other = (BookForBorrow) obj;
+		return (this.getNumOfCopies() == other.getNumOfCopies());
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + ". Num of copies: " + numOfCopies;
 	}
 
 }

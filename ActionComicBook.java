@@ -6,8 +6,8 @@ public class ActionComicBook extends ComicBook {
 
 	// Default constructor
 	public ActionComicBook() {
+		super();
 		setNameOfBook("Spiderman");
-		setNumOfPages(124);
 		setNameOfAuthor("MARVEL");
 		setNumOfCopies(13);
 		this.ageLimit = 10;
@@ -25,9 +25,9 @@ public class ActionComicBook extends ComicBook {
 
 	// Function that sets the age limit (ageLimit >= 0. default = 16).
 	public void setAgeLimit(int ageLimit) {
-		if(ageLimit < 0) {
+		if (ageLimit < 0) {
 			this.ageLimit = 16;
-		} else{
+		} else {
 			this.ageLimit = ageLimit;
 		}
 	}
@@ -35,8 +35,49 @@ public class ActionComicBook extends ComicBook {
 	// Function that prints the book summary.
 	@Override
 	public String Summarize() {
-		return super.Summarize() + " This action comic book is for ages greater than " + this.getAgeLimit()
-				+ " years old.";
+		return "This is an action comic book." + " This action comic book is for ages greater than "
+				+ this.getAgeLimit() + " years old.";
+	}
+
+	@Override
+	// Override super class because it was defined that cannot borrow a comicBook
+	// object.
+	// Library borrowing function. Receives number of copies to borrow (numOfCopies
+	// > 0).
+	// Checks whether such number of copies can be borrowed and updates the
+	// numOfCopies field.
+	public boolean borrow(int numOfCopies) {
+		if (numOfCopies <= 0) {
+			System.out.println("INVALID VALUE");
+			return false;
+		}
+		if (this.getNumOfCopies() - numOfCopies >= 0) {
+			this.setNumOfCopies(this.getNumOfCopies() - numOfCopies);
+			System.out.println(numOfCopies + " copies were borrowed");
+			return true;
+		} else {
+			// TODO
+			// check if we need to print this message.
+			System.out.println("You can't borrow " + numOfCopies + " copies. " + "There are only "
+					+ this.getNumOfCopies() + " Copies available in the library");
+			return false;
+		}
+	}
+
+	// Override super class because it was defined that cannot borrow a comicBook
+	// object.
+	// Library return function.
+	// (Receives number of copies to return (numOfCopies > 0),
+	// updates numOfCopies field.
+	public boolean returnBook(int numOfCopies) {
+		if (numOfCopies > 0) {
+			this.setNumOfCopies(this.getNumOfCopies() + numOfCopies);
+			System.out.println(numOfCopies + " copies were returned");
+			return true;
+		} else {
+			System.out.println("INVALID VALUE");
+			return false;
+		}
 	}
 
 	@Override

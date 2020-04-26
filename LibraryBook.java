@@ -2,16 +2,6 @@ package homeWork4;
 
 public class LibraryBook extends Book {
 
-	
-	// TODO 
-	// ask at forum about writing the contractors
-	// and toString function even if it extends 
-
-
-	// TODO
-	// ask at forum about writing the constractors
-	// and toString function even if it extends
-
 	// Default constructor
 	public LibraryBook() {}
 	
@@ -27,6 +17,7 @@ public class LibraryBook extends Book {
 		
 	}
 	
+	@Override
 	public boolean equals(Object obj) {
 		if(!(obj instanceof LibraryBook))
 			return false;
