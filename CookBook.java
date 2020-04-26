@@ -31,8 +31,6 @@ public class CookBook extends BookForBorrow {
 
 	// Function that prints the book summary.
 	public String Summarize() {
-		// TODO to Check if we need to write it again
-		// (gay asked at the forum about it).
 		return "This is a cook book." + " This cooking book might contain non cosher intgredients";
 	}
 

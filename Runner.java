@@ -39,8 +39,7 @@ public class Runner {
 		System.out.println();
 		// 4)
 		System.out.println("*************** 4 ************");
-		// TODO
-		// check some problems here. in the console.
+	
 		System.out.println(book.Summarize());
 		System.out.println(lBook.Summarize());
 		System.out.println(bfbBook.Summarize());

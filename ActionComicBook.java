@@ -56,8 +56,6 @@ public class ActionComicBook extends ComicBook {
 			System.out.println(numOfCopies + " copies were borrowed");
 			return true;
 		} else {
-			// TODO
-			// check if we need to print this message.
 			System.out.println("You can't borrow " + numOfCopies + " copies. " + "There are only "
 					+ this.getNumOfCopies() + " Copies available in the library");
 			return false;

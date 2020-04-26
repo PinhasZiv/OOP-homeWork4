@@ -26,15 +26,16 @@ public class CosherCookBook extends CookBook {
 
 	// Function that prints the book summary.
 	public String Summarize() {
-		return "This is a cosher cooking book. " + "This cosher cooking book is superbised by: " + this.getSuperVision();
+		return "This is a cosher cooking book. " + "This cosher cooking book is superbised by: "
+				+ this.getSuperVision();
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
-		if(!(obj instanceof CosherCookBook))
+		if (!(obj instanceof CosherCookBook))
 			return false;
-		if(!(super.equals(obj)))
-				return false;
+		if (!(super.equals(obj)))
+			return false;
 		CosherCookBook other = (CosherCookBook) obj;
 		return (this.getSuperVision() == other.getSuperVision());
 	}
@@ -46,5 +47,5 @@ public class CosherCookBook extends CookBook {
 	public void setSuperVision(String superVision) {
 		this.supervision = superVision;
 	}
-	
+
 }

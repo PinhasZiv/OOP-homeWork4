@@ -17,18 +17,13 @@ public class ComicBook extends BookForBorrow {
 
 	// Function that prints the book summary.
 	public String Summarize() {
-		// TODO
-		// check if we need to print the message
-		// "this book is for reading inside the library only".
-		return "This is a comic book. " + super.Summarize();
-		}
-
+		return "This is a comic book. " + "This book is for reading inside the library only";
+	}
 
 	@Override
 	public boolean borrow(int numOfCopies) {
 		return super.borrow(0);
 	}
-	
 
 	@Override
 	public boolean returnBook(int numOfCopies) {
